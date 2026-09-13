@@ -1,16 +1,22 @@
 # Migração de rastreamento
 
-## Regra principal
-Não publicar `main` no domínio oficial antes de copiar e validar os IDs atuais do site antigo.
+## IDs confirmados no export do site antigo
+- **GA4 Measurement ID:** `G-TGK0SBQ67Y`
+- **Meta Pixel ID:** `1607294577443562`
 
-## Manter os mesmos ativos
-- Google Analytics 4: mesma propriedade e mesmo Measurement ID.
-- Google Ads: mesmas conversões e mesmas ações de conversão sempre que possível.
-- Google Tag Manager: mesmo container, se o site antigo usar GTM.
-- Meta Pixel: mesmo Pixel ID.
-- Search Console: mesma propriedade de domínio.
+Esses mesmos IDs já estão configurados em `assets/site.js` na branch `staging`.
 
-## Eventos previstos no novo site
+## O que NÃO foi encontrado no código exportado
+- Nenhum `GTM-...` (Google Tag Manager).
+- Nenhum `AW-...` (Google Ads conversion tag) explícito.
+
+Isso não prova que não exista uma configuração adicional fora do código exportado. Antes do go-live, precisamos conferir o Google Ads, Google Tag Manager (se existir) e as configurações de conversão da conta.
+
+## Eventos e preservação de campanha
+O novo site preserva em `localStorage`:
+`utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`, `gclid`, `gbraid`, `wbraid`, `fbclid`.
+
+Eventos previstos:
 - `page_view`
 - `view_item`
 - `ViewContent`
@@ -20,15 +26,11 @@ Não publicar `main` no domínio oficial antes de copiar e validar os IDs atuais
 - `maps_click`
 - `reviews_click`
 
-## Preservação de campanha
-O arquivo `assets/site.js` preserva em `localStorage`:
-`utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`, `gclid`, `gbraid`, `wbraid`, `fbclid`.
-
-## Antes do go-live
-1. Confirmar IDs atuais no Google Ads/GA4/GTM/Meta.
-2. Configurar os IDs em `assets/site.js` ou no mecanismo de tags escolhido.
-3. Testar Real Time do GA4.
-4. Testar Google Ads Tag Assistant/diagnóstico.
-5. Testar Meta Events Manager/Test Events.
-6. Clicar em todos os CTAs e conferir eventos.
-7. Só depois trocar o apontamento do domínio.
+## Regra de publicação
+Não trocar o domínio oficial até validar:
+1. GA4 em tempo real.
+2. Google Ads/Tag Assistant e conversões.
+3. Meta Events Manager/Test Events.
+4. Cliques de WhatsApp, Maps e CTAs.
+5. Preservação das UTMs e identificadores de campanha.
+6. Search Console, sitemap e páginas indexáveis.
