@@ -4,7 +4,6 @@ export default defineConfig({
   appType: 'mpa',
   build: {
     target: 'es2020',
-    cssMinify: 'lightningcss',
     rollupOptions: {
       input: {
         home: 'index.html',
