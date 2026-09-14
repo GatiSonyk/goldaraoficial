@@ -1,0 +1,1 @@
+Performance cleanup initiated: local assets, reduced third-party blocking, lazy-loading, explicit image dimensions, and tracking deferral.
