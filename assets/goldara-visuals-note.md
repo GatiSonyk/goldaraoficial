@@ -1,0 +1,1 @@
+Optimized local WebP visuals are prepared in the working container for upload. The next deployment should serve them locally to avoid third-party image latency.
