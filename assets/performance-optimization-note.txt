@@ -1,0 +1,1 @@
+Goldara performance rebuild: local WebP imagery, deferred analytics, stronger contrast and reduced blocking resources.
