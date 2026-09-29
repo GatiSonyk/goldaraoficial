@@ -126,3 +126,78 @@ body{padding-top:48px}
  .floating-wa{width:58px !important;height:58px !important;right:16px !important;bottom:16px !important}
  .floating-wa .wa-icon,.floating-wa svg{width:32px;height:32px}
 }
+
+/* Final layout fix - hero copy above product image */
+/* Header logo: inline SVG */
+.brand-mark{display:block;width:142px;height:30px;flex:0 0 auto}
+.brand{display:flex !important;align-items:center !important;height:48px !important;min-width:170px !important}
+@media(max-width:900px){.brand{height:52px !important;min-width:160px !important}.brand-mark{width:145px;height:31px}}
+@media(max-width:560px){.brand{min-width:150px !important}.brand-mark{width:140px;height:30px}}
+
+/* Apple-style hero composition: copy first, image clearly below */
+.hero-product{
+  min-height:760px !important;
+  height:auto !important;
+  padding:86px 0 0 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  overflow:hidden !important;
+}
+.hero-product .product-copy{
+  position:relative !important;
+  z-index:5 !important;
+  width:min(920px,92vw) !important;
+  text-align:center !important;
+  margin:0 auto !important;
+}
+.hero-product .product-copy .eyebrow{margin-bottom:22px !important}
+.hero-product .product-copy h1{margin:0 !important}
+.hero-product .product-copy .product-subtitle{margin-top:12px !important}
+.hero-product .product-copy .product-text{margin-top:18px !important}
+.hero-product .product-actions{margin-top:24px !important;position:relative !important;z-index:6 !important}
+
+.hero-visual{
+  position:relative !important;
+  left:auto !important;
+  right:auto !important;
+  top:auto !important;
+  bottom:auto !important;
+  transform:none !important;
+  z-index:1 !important;
+  width:min(1060px,92vw) !important;
+  height:auto !important;
+  margin:30px auto 0 !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:flex-end !important;
+  mask-image:none !important;
+  -webkit-mask-image:none !important;
+}
+.hero-visual img{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  height:auto !important;
+  object-fit:contain !important;
+  object-position:center bottom !important;
+  filter:none !important;
+}
+.floating-wa{
+  position:fixed !important;
+  right:22px !important;
+  bottom:22px !important;
+  z-index:100 !important;
+}
+.floating-wa .wa-icon svg{width:36px !important;height:36px !important;fill:#fff !important}
+
+@media(max-width:900px){
+  .hero-product{min-height:700px !important;padding-top:72px !important}
+  .hero-visual{width:102vw !important;margin-top:26px !important}
+}
+@media(max-width:560px){
+  .hero-product{min-height:650px !important;padding-top:66px !important}
+  .hero-product .product-copy{width:92vw !important}
+  .hero-visual{width:118vw !important;margin-top:24px !important}
+}
