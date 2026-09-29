@@ -116,8 +116,48 @@ function track(name, params = {}) {
   }
 }
 
+function initMobileMenu() {
+  const header = document.querySelector('.header');
+  const button = document.querySelector('.menu');
+  const mobileNav = document.querySelector('.mobile-nav');
+  if (!header || !button || !mobileNav) return;
+
+  const close = () => {
+    header.classList.remove('menu-open');
+    button.setAttribute('aria-expanded', 'false');
+    mobileNav.setAttribute('aria-hidden', 'true');
+  };
+
+  button.addEventListener('click', () => {
+    const open = !header.classList.contains('menu-open');
+    header.classList.toggle('menu-open', open);
+    button.setAttribute('aria-expanded', String(open));
+    mobileNav.setAttribute('aria-hidden', String(!open));
+  });
+
+  mobileNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', close));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') close();
+  });
+}
+
+function initAnchorTracking() {
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const target = link.getAttribute('href')?.replace('#', '') || 'top';
+      track('navigation_click', {
+        location: 'header',
+        target,
+        page_path: location.pathname,
+      });
+    });
+  });
+}
+
 function hydrate() {
   initTracking();
+  initMobileMenu();
+  initAnchorTracking();
 
   document.querySelectorAll('[data-whatsapp]').forEach((a) => {
     a.href = whatsappUrl(a.dataset.whatsapp || undefined);
