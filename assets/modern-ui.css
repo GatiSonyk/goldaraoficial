@@ -229,3 +229,88 @@ body{padding-top:48px}
  .hero-product .product-copy h1{font-size:48px !important}
  .hero-visual{width:145vw !important;transform:translateY(-52px) !important;margin-top:-12px !important}
 }
+
+/* Footer contrast refinement */
+/* Strong contrast, still aligned with Goldara + Apple-inspired palette */
+.premium-footer{
+  background:#0b0b0d !important;
+  color:#f5f5f7 !important;
+  border-top:1px solid #2a2a2d !important;
+}
+.premium-footer *{box-sizing:border-box}
+.premium-footer .footer-logo,
+.premium-footer .footer-logo span,
+.premium-footer .footer-logo small{color:#f5f5f7 !important}
+.premium-footer .footer-logo-mark{
+  border-color:#d6ad35 !important;
+  color:#d6ad35 !important;
+  background:rgba(214,173,53,.06) !important;
+}
+.premium-footer .footer-brand-col>p,
+.premium-footer .footer-column p,
+.premium-footer .location-heading p{
+  color:#c7c7cc !important;
+}
+.premium-footer .footer-column h4,
+.premium-footer .footer-review-column>h4,
+.premium-footer .location-heading h4{
+  color:#e0b83f !important;
+}
+.premium-footer .footer-column p strong{
+  color:#e0b83f !important;
+}
+.premium-footer .footer-column a,
+.premium-footer .footer-navigation>a{
+  color:#f2f2f4 !important;
+}
+.premium-footer .footer-column a:hover,
+.premium-footer .footer-navigation>a:hover{
+  color:#e0b83f !important;
+}
+.premium-footer .social-row a{
+  color:#f5f5f7 !important;
+  border-color:#3a3a3e !important;
+  background:#121214 !important;
+}
+.premium-footer .social-row a:hover{
+  border-color:#e0b83f !important;
+  color:#e0b83f !important;
+  background:#171719 !important;
+}
+.premium-footer .footer-location,
+.premium-footer .foot-bottom{
+  border-color:#2a2a2d !important;
+}
+.premium-footer .location-heading>a{
+  color:#e0b83f !important;
+  border-color:rgba(224,184,63,.65) !important;
+  background:transparent !important;
+}
+.premium-footer .location-heading>a:hover{
+  background:#d6ad35 !important;
+  color:#111 !important;
+}
+.premium-footer .review-card{
+  background:#111113 !important;
+  border:1px solid #3b3b3f !important;
+  box-shadow:none !important;
+}
+.premium-footer .review-card,
+.premium-footer .review-card p,
+.premium-footer .review-card strong{
+  color:#f5f5f7 !important;
+}
+.premium-footer .review-card small{
+  color:#e0b83f !important;
+}
+.premium-footer .review-button{
+  background:#d6ad35 !important;
+  color:#111 !important;
+  border-color:#d6ad35 !important;
+}
+.premium-footer .foot-bottom{
+  color:#9b9ba2 !important;
+}
+.premium-footer .foot-bottom a{
+  color:#c7c7cc !important;
+}
