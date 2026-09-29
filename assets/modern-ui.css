@@ -314,3 +314,25 @@ body{padding-top:48px}
 .premium-footer .foot-bottom a{
   color:#c7c7cc !important;
 }
+
+
+/* Exact Goldara logo + compact Apple-style hero + iPhone Duo */
+.brand-logo{width:132px !important;height:auto !important;max-width:132px !important;object-fit:contain !important}
+.footer-logo{display:inline-flex !important;align-items:center !important}
+.footer-logo img{display:block;width:210px;height:auto;max-width:100%;object-fit:contain}
+.hero-product{min-height:590px !important}
+.hero-product .product-copy{padding-top:58px !important}
+.hero-product .product-copy .product-text{max-width:620px !important;margin-left:auto !important;margin-right:auto !important}
+.hero-visual{width:min(980px,78vw) !important;transform:none !important;margin:20px auto 0 !important}
+.duo-product{min-height:610px;background:#f5f5f7;color:#1d1d1f;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;overflow:hidden;padding:62px 20px 0}
+.duo-copy{position:relative;z-index:2;width:min(860px,92vw)}
+.duo-eyebrow{color:#6e6e73 !important;margin-bottom:14px !important}
+.duo-product h2{font-size:clamp(42px,5vw,64px);line-height:1;margin:0;letter-spacing:-.04em}
+.duo-subtitle{font-size:clamp(20px,2.3vw,28px);margin:12px 0 5px;color:#1d1d1f}
+.duo-meta{font-size:15px;margin:0;color:#6e6e73}
+.duo-product .product-actions{margin-top:20px !important}
+.duo-product .pill.secondary{color:#0071e3 !important;border-color:#0071e3 !important}
+.duo-visual{width:min(1180px,94vw);margin:28px auto 0;display:flex;justify-content:center;align-items:flex-end}
+.duo-visual img{display:block;width:100%;height:auto;object-fit:contain}
+@media(max-width:900px){.hero-product{min-height:560px !important}.hero-product .product-copy{padding-top:54px !important}.hero-visual{width:86vw !important}.duo-product{min-height:560px;padding-top:54px}.duo-visual{width:118vw;margin-top:24px}}
+@media(max-width:560px){.brand-logo{width:124px !important}.hero-product{min-height:510px !important}.hero-product .product-copy{padding-top:48px !important}.hero-product .product-copy .product-text{font-size:14px !important}.hero-visual{width:102vw !important;margin-top:14px !important}.duo-product{min-height:520px;padding-top:48px}.duo-product h2{font-size:42px}.duo-visual{width:145vw;margin-top:20px}}
