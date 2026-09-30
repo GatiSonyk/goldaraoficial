@@ -465,3 +465,49 @@ body { padding-top: 64px !important; background: #fff; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+
+/* Apple AirPods hero animation */
+.tile-airpods {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #f5f6f8 0%, #eceef2 100%) !important;
+}
+.tile-airpods .tile-copy { position: relative; z-index: 2; }
+.tile-airpods .eyebrow { color: #80641e !important; }
+.tile-airpods .tile-copy h2 { color: #1d1d1f !important; }
+.tile-airpods .tile-copy p { color: #63666b !important; }
+.tile-airpods .text-link { color: #1d1d1f !important; }
+.airpods-animation {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  bottom: -78px;
+  width: min(100%, 470px);
+  aspect-ratio: 1380 / 756;
+  overflow: hidden;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.airpods-animation-poster,
+.airpods-animation video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.airpods-animation-poster { z-index: 0; }
+.airpods-animation video {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+.airpods-animation.is-playing video { opacity: 1; }
+@media (max-width: 560px) {
+  .airpods-animation { bottom: -32px; width: min(100%, 470px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .airpods-animation video { display: none; }
+}

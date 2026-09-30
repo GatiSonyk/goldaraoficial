@@ -182,11 +182,36 @@ function initIpadAirAnimation() {
   }
 }
 
+function initAirpodsAnimation() {
+  const video = document.querySelector('[data-airpods-animation]');
+  if (!video || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const art = video.closest('.airpods-animation');
+  video.addEventListener('playing', () => art?.classList.add('is-playing'));
+
+  const play = () => {
+    const playback = video.play();
+    if (playback && typeof playback.catch === 'function') playback.catch(() => {});
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        play();
+        observer.disconnect();
+      }
+    }, { threshold: 0.12, rootMargin: '0px 0px 80px 0px' });
+    observer.observe(video);
+  } else {
+    play();
+  }
+}
+
 function hydrate() {
   initTracking();
   initMobileMenu();
   initAnchorTracking();
   initIpadAirAnimation();
+  initAirpodsAnimation();
 
   document.querySelectorAll('[data-whatsapp]').forEach((a) => {
     a.href = whatsappUrl(a.dataset.whatsapp || undefined);
