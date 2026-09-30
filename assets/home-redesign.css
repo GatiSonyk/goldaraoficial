@@ -369,6 +369,76 @@ body { padding-top: 64px !important; background: #fff; }
   .final-cta h2 { font-size: 46px !important; }
 }
 
+.ipad-air-product {
+  min-height: 620px !important;
+  overflow: hidden;
+  background: linear-gradient(128deg, #e7f7ff 0%, #c7eafa 54%, #eff9fd 100%) !important;
+}
+.ipad-air-product .product-copy { position: relative; z-index: 2; }
+.ipad-air-product .product-copy h2 { color: #1d1d1f !important; }
+.ipad-air-product .ipad-air-subtitle { color: #075da5 !important; }
+.ipad-air-product .ipad-air-text { max-width: 470px; color: #4a535d !important; }
+.ipad-air-product .ipad-air-art {
+  position: relative !important;
+  inset: auto !important;
+  display: grid;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+  width: min(100%, 420px) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  isolation: isolate;
+}
+.ipad-air-product .ipad-air-art::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 92%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.86) 0%, rgba(255,255,255,.38) 42%, rgba(85,179,224,.12) 66%, transparent 73%);
+  animation: ipad-air-glow 7s ease-in-out infinite alternate;
+}
+.ipad-air-product .ipad-air-poster,
+.ipad-air-product .ipad-air-animation {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 630 / 1054;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 22px 30px rgba(28, 91, 130, .16));
+}
+.ipad-air-product .ipad-air-poster {
+  position: relative;
+  z-index: 1;
+  display: block;
+  transition: opacity .28s ease;
+}
+.ipad-air-product .ipad-air-animation {
+  position: relative;
+  z-index: 2;
+  display: block;
+  opacity: 0;
+  border: 0;
+  background: transparent;
+  transition: opacity .28s ease;
+}
+.ipad-air-art.is-playing .ipad-air-poster { opacity: 0; }
+.ipad-air-art.is-playing .ipad-air-animation { opacity: 1; }
+@keyframes ipad-air-glow {
+  from { opacity: .62; transform: scale(.94); }
+  to { opacity: 1; transform: scale(1.05); }
+}
+
+@media (max-width: 680px) {
+  .ipad-air-product { min-height: 0 !important; padding: 50px 23px 28px !important; gap: 4px; }
+  .ipad-air-product .product-copy h2 { font-size: 42px !important; }
+  .ipad-air-product .ipad-air-art { width: min(100%, 360px) !important; margin: -12px auto -8px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
