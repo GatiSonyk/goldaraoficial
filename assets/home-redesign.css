@@ -511,3 +511,91 @@ body { padding-top: 64px !important; background: #fff; }
 @media (prefers-reduced-motion: reduce) {
   .airpods-animation video { display: none; }
 }
+
+
+/* Garantia de seminovos e recompra */
+.guarantee-section {
+  display: block !important;
+  min-height: 0 !important;
+  padding: clamp(64px, 7vw, 92px) max(22px, calc((100vw - 1120px) / 2)) !important;
+  text-align: left !important;
+}
+.guarantee-inner.guarantee-layout {
+  width: 100%;
+  max-width: 1120px !important;
+  margin: 0 auto;
+}
+.guarantee-section .eyebrow { color: #dfc486 !important; }
+.guarantee-intro { max-width: 800px; margin: 0 0 32px; }
+.guarantee-intro h2 {
+  margin: 8px 0 16px;
+  color: #fff;
+  font-size: clamp(36px, 4.6vw, 58px) !important;
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+.guarantee-intro p {
+  max-width: 760px !important;
+  margin: 0 !important;
+  color: #c5c5c8 !important;
+  font-size: 16px !important;
+  line-height: 1.7;
+}
+.guarantee-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.guarantee-card {
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
+}
+.guarantee-card .eyebrow { margin: 0 0 12px; }
+.guarantee-card h3 {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: clamp(25px, 2.5vw, 32px);
+  line-height: 1.1;
+  letter-spacing: -.035em;
+}
+.guarantee-card p {
+  margin: 0 0 18px;
+  color: #c4c4c8;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.guarantee-card ul {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.guarantee-card li {
+  position: relative;
+  padding-left: 24px;
+  color: #eeeef0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.guarantee-card li::before {
+  content: "✓";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #dfc486;
+  font-weight: 800;
+}
+.guarantee-actions { margin-top: 26px; }
+@media (max-width: 760px) {
+  .guarantee-grid { grid-template-columns: 1fr; gap: 14px; }
+  .guarantee-card { padding: 24px; }
+}
+@media (max-width: 560px) {
+  .guarantee-section { padding: 60px 20px !important; }
+  .guarantee-intro { margin-bottom: 24px; }
+  .guarantee-intro h2 { font-size: 38px !important; }
+  .guarantee-card { padding: 22px 20px; }
+}
