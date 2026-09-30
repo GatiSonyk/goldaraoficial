@@ -370,7 +370,7 @@ body { padding-top: 64px !important; background: #fff; }
 }
 
 .ipad-air-product {
-  min-height: 620px !important;
+  min-height: 500px !important;
   overflow: hidden;
   background: linear-gradient(128deg, #e7f7ff 0%, #c7eafa 54%, #eff9fd 100%) !important;
 }
@@ -385,7 +385,7 @@ body { padding-top: 64px !important; background: #fff; }
   place-items: center;
   justify-self: center;
   align-self: center;
-  width: min(100%, 420px) !important;
+  width: min(100%, 245px) !important;
   height: auto !important;
   min-height: 0 !important;
   overflow: visible !important;
@@ -436,7 +436,7 @@ body { padding-top: 64px !important; background: #fff; }
 @media (max-width: 680px) {
   .ipad-air-product { min-height: 0 !important; padding: 50px 23px 28px !important; gap: 4px; }
   .ipad-air-product .product-copy h2 { font-size: 42px !important; }
-  .ipad-air-product .ipad-air-art { width: min(100%, 360px) !important; margin: -12px auto -8px; }
+  .ipad-air-product .ipad-air-art { width: min(100%, 215px) !important; margin: -12px auto -8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
