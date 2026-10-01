@@ -478,18 +478,45 @@ body { padding-top: 64px !important; background: #fff; }
 .tile-airpods .tile-copy h2 { color: #1d1d1f !important; }
 .tile-airpods .tile-copy p { color: #63666b !important; }
 .tile-airpods .text-link { color: #1d1d1f !important; }
-.airpods-visual {
+.airpods-animation {
   position: absolute;
   z-index: 0;
   left: 50%;
-  bottom: -36px;
-  width: min(100%, 400px);
-  aspect-ratio: 1280 / 832;
+  bottom: -78px;
+  width: min(100%, 470px);
+  aspect-ratio: 1380 / 756;
   overflow: hidden;
   transform: translateX(-50%);
   pointer-events: none;
 }
-.airpods-visual img {
+.airpods-animation-poster,
+.airpods-animation video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.airpods-animation-poster { z-index: 0; }
+.airpods-animation video {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+.airpods-animation.is-playing video { opacity: 1; }
+.tile-blue .tile-copy { position: relative; z-index: 2; }
+.tile-blue .accessory-art {
+  z-index: 0;
+  bottom: -44px !important;
+  width: min(100%, 390px) !important;
+  height: auto !important;
+  aspect-ratio: 1280 / 832;
+  overflow: hidden;
+  transform: translateX(-50%) !important;
+  pointer-events: none;
+}
+.tile-blue .accessory-art img {
   display: block;
   width: 100%;
   height: 100%;
@@ -497,7 +524,11 @@ body { padding-top: 64px !important; background: #fff; }
   object-fit: cover;
 }
 @media (max-width: 560px) {
-  .airpods-visual { bottom: -28px; width: min(100%, 360px); }
+  .airpods-animation { bottom: -32px; width: min(100%, 470px); }
+  .tile-blue .accessory-art { bottom: -28px !important; width: min(100%, 360px) !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .airpods-animation video { display: none; }
 }
 
 
