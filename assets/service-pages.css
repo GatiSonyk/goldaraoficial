@@ -1,0 +1,198 @@
+/* Shared Goldara subpage presentation: premium black, white and warm-gold palette. */
+.page-header {
+  color: #fff;
+  background: rgba(5, 5, 5, .94);
+  border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+.page-header .links { color: #ececef; }
+.page-header .menu { color: #fff; }
+.page-header .mobile-nav {
+  color: #fff;
+  background: rgba(8, 8, 8, .98);
+  border-color: rgba(255, 255, 255, .14);
+}
+.page-header .mobile-nav a { color: #fff; }
+.page-logo { display: block; width: 148px; height: auto; }
+.page-body { background: #fff; color: #1d1d1f; }
+.page-body h1, .page-body h2, .page-body h3, .page-body p { margin-top: 0; }
+.page-eyebrow {
+  margin: 0 0 15px;
+  color: #d6ad35;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .32em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.page-muted { color: #a1a1a6; }
+.page-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 23px;
+  border: 0;
+  border-radius: 999px;
+  background: #d6ad35;
+  color: #111;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  transition: transform .2s ease, background .2s ease;
+}
+.page-button:hover { transform: translateY(-2px); background: #f1c95a; }
+.page-button-secondary {
+  border: 1px solid rgba(255, 255, 255, .35);
+  background: transparent;
+  color: #fff;
+}
+.page-button-secondary:hover { background: rgba(255, 255, 255, .1); }
+.page-button-dark {
+  border: 1px solid rgba(0, 0, 0, .16);
+  background: #fff;
+  color: #111;
+}
+.page-cta-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; }
+.page-section { padding: clamp(64px, 8vw, 112px) 24px; }
+.page-section-inner { width: min(1120px, 100%); margin-inline: auto; }
+.page-section-title {
+  max-width: 820px;
+  margin: 0 auto 14px;
+  font-size: clamp(34px, 5vw, 60px);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+  text-align: center;
+}
+.page-section-lead { max-width: 680px; margin: 0 auto 38px; color: #6e6e73; font-size: 17px; text-align: center; }
+.page-dark { background: #050505; color: #fff; }
+.page-light { background: #f5f5f7; color: #1d1d1f; }
+.page-white { background: #fff; color: #1d1d1f; }
+
+/* iPhone 17 product page */
+.iphone17-hero {
+  overflow: hidden;
+  padding: clamp(56px, 8vw, 104px) 24px 52px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+.iphone17-hero-inner { width: min(1180px, 100%); margin: auto; }
+.iphone17-hero h1 { margin: 0 auto 16px; font-size: clamp(43px, 8vw, 86px); line-height: .98; letter-spacing: -.06em; }
+.iphone17-hero h1 span { display: block; margin-top: 10px; color: #e3b637; font-size: .42em; letter-spacing: -.02em; }
+.iphone17-hero .hero-note { max-width: 620px; margin: 0 auto 24px; color: #b9b9be; font-size: 16px; }
+.iphone17-hero .limited-note { margin: 16px 0 28px; color: #85858b; font-size: 13px; }
+.iphone17-art { width: min(1060px, 100%); margin: 40px auto 0; }
+.iphone17-art img { width: 100%; height: auto; border-radius: 12px; }
+.iphone17-trust-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 36px; }
+.iphone17-trust-card { min-height: 116px; padding: 22px 18px; border: 1px solid rgba(255,255,255,.13); border-radius: 18px; background: #101012; }
+.iphone17-trust-card strong { display: block; margin-bottom: 7px; color: #f4d477; font-size: 14px; }
+.iphone17-trust-card span { display: block; color: #b2b2b8; font-size: 13px; }
+.iphone17-spec-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 38px; }
+.iphone17-spec-card { padding: 25px; border: 1px solid #e4e4e8; border-radius: 20px; background: #fff; }
+.iphone17-spec-card .spec-label { display: block; margin-bottom: 9px; color: #8a6914; font-size: 11px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+.iphone17-spec-card strong { display: block; margin-bottom: 6px; font-size: 21px; letter-spacing: -.025em; }
+.iphone17-spec-card p { margin: 0; color: #6e6e73; font-size: 14px; }
+.iphone17-feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch; margin-top: 42px; }
+.iphone17-feature-card { overflow: hidden; padding: 16px; border: 1px solid rgba(255,255,255,.12); border-radius: 22px; background: #0b0b0c; }
+.iphone17-feature-card img { width: 100%; height: auto; border-radius: 13px; }
+.iphone17-colors { display: grid; grid-template-columns: .95fr 1.05fr; gap: 40px; align-items: center; }
+.iphone17-colors img, .iphone17-box img { width: 100%; height: auto; border-radius: 20px; }
+.iphone17-color-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 24px 0 0; padding: 0; list-style: none; }
+.iphone17-color-list li { padding: 10px 15px; border: 1px solid #e2e2e6; border-radius: 999px; background: #fff; font-size: 13px; font-weight: 700; }
+.iphone17-box { width: min(820px, 100%); margin: 36px auto 0; overflow: hidden; border-radius: 20px; background: #f6f6f8; }
+.iphone17-review { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 32px; border: 1px solid #e6e6e9; border-radius: 22px; background: #fff; }
+.iphone17-review .rating { color: #a17810; font-size: 13px; font-weight: 800; letter-spacing: .14em; }
+.iphone17-review h3 { margin: 8px 0 5px; font-size: 23px; }
+.iphone17-review p { margin: 0; color: #6e6e73; font-size: 14px; }
+.iphone17-location { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; padding: 28px 30px; border-radius: 22px; background: #111; color: #fff; }
+.iphone17-location p { margin: 0; color: #b1b1b6; }
+
+/* Technical-assistance page */
+.assist-hero { padding: clamp(50px, 7vw, 92px) 24px; background: #000; color: #fff; }
+.assist-hero-inner { display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(30px, 6vw, 76px); align-items: center; width: min(1180px, 100%); margin: auto; }
+.assist-hero h1 { max-width: 650px; margin: 0 0 18px; font-size: clamp(42px, 6vw, 72px); line-height: .99; letter-spacing: -.055em; }
+.assist-hero-copy > p:not(.page-eyebrow) { max-width: 580px; margin: 0 0 25px; color: #b7b7bc; font-size: 17px; }
+.assist-hero-image { overflow: hidden; border-radius: 24px; box-shadow: 0 25px 80px rgba(255,255,255,.06); }
+.assist-hero-image img { width: 100%; height: auto; aspect-ratio: 1.54; object-fit: cover; }
+.assist-problem-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; margin-top: 36px; }
+.assist-problem-card { display: flex; flex-direction: column; align-items: flex-start; min-height: 205px; padding: 23px; border: 1px solid #e5e5e8; border-radius: 20px; background: #fff; }
+.assist-problem-card .problem-index { margin-bottom: 24px; color: #a17d1f; font-size: 12px; font-weight: 800; letter-spacing: .18em; }
+.assist-problem-card h3 { margin: 0 0 8px; font-size: 19px; letter-spacing: -.02em; }
+.assist-problem-card p { margin: 0 0 16px; color: #6e6e73; font-size: 13px; }
+.assist-problem-card a { margin-top: auto; color: #8a6914; font-size: 13px; font-weight: 800; }
+.assist-problem-card a:hover { text-decoration: underline; }
+.assist-quote-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 42px; align-items: start; }
+.assist-quote-intro h2 { margin: 0 0 14px; font-size: clamp(34px, 4vw, 52px); line-height: 1.02; letter-spacing: -.045em; }
+.assist-quote-intro p { max-width: 400px; color: #6e6e73; }
+.assist-quote-form { padding: clamp(22px, 4vw, 36px); border: 1px solid #e3e3e7; border-radius: 24px; background: #fff; box-shadow: 0 18px 55px rgba(0,0,0,.06); }
+.assist-quote-form fieldset { min-width: 0; margin: 0 0 24px; padding: 0; border: 0; }
+.assist-quote-form legend, .assist-quote-form label.model-label { display: block; margin: 0 0 13px; font-size: 14px; font-weight: 800; }
+.assist-issue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.assist-issue-option { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 11px 13px; border: 1px solid #e6e6e9; border-radius: 12px; background: #fafafa; color: #28282b; font-size: 13px; cursor: pointer; }
+.assist-issue-option:has(input:checked) { border-color: #c39c2f; background: #fff9e8; }
+.assist-issue-option input { width: 17px; height: 17px; margin: 0; accent-color: #b18c22; }
+.assist-quote-form input[type="text"] { width: 100%; min-height: 48px; margin: 0 0 20px; padding: 0 14px; border: 1px solid #d8d8de; border-radius: 12px; background: #fff; color: #1d1d1f; font: inherit; font-size: 15px; }
+.assist-quote-form input[type="text"]:focus { outline: 3px solid rgba(214,173,53,.28); border-color: #a17d1f; }
+.assist-quote-help { margin: -9px 0 20px; color: #6e6e73; font-size: 12px; }
+.assist-quote-form .page-button { width: 100%; cursor: pointer; }
+.assist-quote-privacy { margin: 13px 0 0; color: #77777c; font-size: 12px; text-align: center; }
+.assist-stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; margin-top: 38px; }
+.assist-stat-card { padding: 23px; border: 1px solid rgba(255,255,255,.12); border-radius: 18px; background: #101012; }
+.assist-stat-card strong { display: block; margin-bottom: 9px; color: #f1cd63; font-size: clamp(20px, 2.7vw, 30px); letter-spacing: -.045em; }
+.assist-stat-card h3 { margin: 0 0 8px; font-size: 16px; }
+.assist-stat-card p { margin: 0; color: #aaaab0; font-size: 13px; }
+.assist-advanced-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 34px; }
+.assist-advanced-card { padding: 24px; border: 1px solid #e5e5e8; border-radius: 18px; background: #fff; }
+.assist-advanced-card .page-eyebrow { margin-bottom: 8px; color: #8a6914; }
+.assist-advanced-card h3 { margin: 0 0 8px; font-size: 20px; }
+.assist-advanced-card p { margin: 0; color: #6e6e73; font-size: 14px; }
+.assist-location-grid { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; padding: 30px; border-radius: 22px; background: #f5f5f7; }
+.assist-location-grid h2 { margin: 0 0 9px; font-size: clamp(29px, 4vw, 42px); letter-spacing: -.04em; }
+.assist-location-grid p { margin: 0; color: #6e6e73; }
+.page-footer { padding: 42px 0 26px; background: #050505; color: #fff; }
+.page-footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 28px; }
+.page-footer h2, .page-footer h3 { margin: 0 0 12px; font-size: 13px; letter-spacing: .15em; text-transform: uppercase; }
+.page-footer p, .page-footer a { color: #aaaab0; font-size: 13px; }
+.page-footer a:hover { color: #f1cd63; }
+.page-footer .footer-brand { color: #fff; font-weight: 800; letter-spacing: .12em; }
+.page-footer-bottom { margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.12); color: #8b8b91; font-size: 12px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+@media (max-width: 900px) {
+  .iphone17-trust-grid, .assist-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .assist-problem-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .assist-hero-inner { grid-template-columns: 1fr; }
+  .assist-hero-copy { max-width: 760px; margin-inline: auto; text-align: center; }
+  .assist-hero-copy > p:not(.page-eyebrow) { margin-inline: auto; }
+  .assist-hero-copy .page-cta-row { justify-content: center; }
+  .assist-hero-image { width: min(760px, 100%); margin-inline: auto; }
+  .assist-quote-layout { grid-template-columns: 1fr; gap: 22px; }
+}
+@media (max-width: 650px) {
+  .page-logo { width: 126px; }
+  .page-section { padding: 62px 20px; }
+  .iphone17-hero { padding: 55px 18px 40px; }
+  .iphone17-hero .hero-note { font-size: 15px; }
+  .iphone17-art { margin-top: 30px; }
+  .iphone17-trust-grid, .iphone17-spec-grid, .iphone17-feature-grid,
+  .iphone17-colors, .assist-problem-grid, .assist-stats-grid,
+  .assist-advanced-grid, .assist-location-grid, .page-footer-grid { grid-template-columns: 1fr; }
+  .iphone17-trust-card { min-height: auto; }
+  .iphone17-review { align-items: flex-start; padding: 24px; }
+  .iphone17-location { grid-template-columns: 1fr; padding: 24px; }
+  .assist-hero { padding: 54px 20px; }
+  .assist-hero-copy { text-align: left; }
+  .assist-hero-copy .page-cta-row { justify-content: flex-start; }
+  .assist-hero-image { border-radius: 18px; }
+  .assist-problem-card { min-height: 180px; }
+  .assist-issue-grid { grid-template-columns: 1fr; }
+  .assist-quote-form { padding: 22px 18px; }
+  .assist-location-grid { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-body { scroll-behavior: auto; }
+  .page-button { transition: none; }
+  .page-button:hover { transform: none; }
+}

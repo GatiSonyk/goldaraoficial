@@ -14,6 +14,7 @@ export default defineConfig({
         tela: 'troca-de-tela-iphone-gramado/index.html',
         loja: 'loja-de-iphone-em-gramado/index.html',
         iphone: 'iphone/index.html',
+        iphone17: 'iphone17/index.html',
         contato: 'contato/index.html',
         sobre: 'sobre/index.html'
       }
