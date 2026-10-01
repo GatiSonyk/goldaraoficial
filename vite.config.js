@@ -4,6 +4,7 @@ export default defineConfig({
   appType: 'mpa',
   build: {
     target: 'es2020',
+    cssMinify: 'lightningcss',
     rollupOptions: {
       input: {
         home: 'index.html',
@@ -13,8 +14,11 @@ export default defineConfig({
         tela: 'troca-de-tela-iphone-gramado/index.html',
         loja: 'loja-de-iphone-em-gramado/index.html',
         iphone: 'iphone/index.html',
+        iphone17: 'iphone17/index.html',
         contato: 'contato/index.html',
-        sobre: 'sobre/index.html'
+        sobre: 'sobre/index.html',
+        privacy: 'politica-de-privacidade.html',
+        terms: 'termos-de-servico.html'
       }
     }
   }

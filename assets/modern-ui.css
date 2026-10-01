@@ -1,0 +1,341 @@
+/* Goldara modern shell: fixed navigation + premium footer */
+html{scroll-padding-top:84px}
+body{padding-top:64px}
+.header{position:fixed;top:0;left:0;right:0;width:100%;z-index:1000}
+
+.premium-footer{background:#050505;color:#f5f5f7;border-top:1px solid rgba(255,255,255,.08);padding:64px 0 28px}
+.footer-main{display:grid;grid-template-columns:1.25fr 1.35fr 1fr 1.15fr;gap:56px;align-items:start}
+.footer-brand-col{max-width:310px}
+.footer-logo{display:inline-flex;align-items:center;gap:10px;color:#fff;font-size:25px;font-weight:700;letter-spacing:-.04em}
+.footer-logo-mark{width:32px;height:32px;border:1px solid #d6ad35;border-radius:10px;display:grid;place-items:center;color:#d6ad35;font-size:17px;font-weight:800}
+.footer-logo small{display:block;font-size:6px;letter-spacing:.27em;font-weight:700;color:#8d8d93;margin-top:2px}
+.footer-brand-col>p{color:#a6a6ad;font-size:13px;line-height:1.65;margin:22px 0 20px}
+.social-row{display:flex;align-items:center;gap:12px}
+.social-row a{width:42px;height:42px;border:1px solid rgba(255,255,255,.2);border-radius:50%;display:grid;place-items:center;color:#ddd;line-height:0;transition:.2s ease}
+.social-row .social-icon{display:block;width:21px;height:21px;flex:none}
+.social-row .facebook-icon{width:20px;height:20px}
+.social-row a:hover{border-color:#d6ad35;color:#d6ad35;transform:translateY(-1px)}
+.social-row a:focus-visible{outline:2px solid #e0b83f;outline-offset:3px}
+.footer-column h4,.footer-review-column>h4,.location-heading h4{font-size:11px;letter-spacing:.25em;color:#d6ad35;margin:0 0 18px;font-weight:800}
+.footer-column p{font-size:13px;line-height:1.5;color:#b7b7bd;margin:0 0 13px}
+.footer-column p strong{color:#d6ad35;margin-right:7px;font-weight:500}
+.footer-column a{color:#f0f0f2;transition:color .2s ease}
+.footer-column a:hover{color:#d6ad35}
+.footer-navigation{display:flex;flex-direction:column;align-items:flex-start}
+.footer-navigation>a{font-size:13px;color:#d7d7dc;margin:0 0 13px}
+.footer-navigation>a:hover{color:#d6ad35}
+.review-card{border:1px solid rgba(214,173,53,.35);border-radius:16px;padding:18px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.01));min-height:180px}
+.review-brand{display:flex;align-items:center;gap:12px}
+.review-brand>span{width:36px;height:36px;border-radius:50%;background:#fff;color:#4285f4;display:grid;place-items:center;font-weight:900;font-size:18px}
+.review-brand strong{display:block;font-size:13px;letter-spacing:.08em}
+.review-brand small{display:block;color:#d6ad35;font-size:11px;margin-top:3px}
+.review-card p{color:#96969d;font-size:12px;line-height:1.5;margin:18px 0}
+.review-button{display:inline-flex;align-items:center;min-height:38px;padding:0 14px;border:1px solid rgba(214,173,53,.5);border-radius:999px;color:#fff;font-size:11px;font-weight:700}
+.review-button:hover{background:#d6ad35;color:#111}
+.footer-location{margin-top:58px;padding-top:38px;border-top:1px solid rgba(255,255,255,.08)}
+.location-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:18px}
+.location-heading h4{margin-bottom:8px}
+.location-heading p{color:#b7b7bd;font-size:13px;margin:0}
+.location-heading>a{border:1px solid rgba(214,173,53,.55);border-radius:999px;padding:10px 17px;color:#d6ad35;font-size:10px;font-weight:800;letter-spacing:.16em;white-space:nowrap}
+.location-heading>a:hover{background:#d6ad35;color:#111}
+.map-frame{width:100%;height:360px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#151515}
+.map-frame iframe{width:100%;height:100%;border:0;filter:saturate(.92) contrast(.98)}
+.premium-footer .foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:32px;padding-top:18px;color:#74747b}
+.premium-footer .foot-bottom a{color:#a5a5ab}
+
+@media(max-width:1050px){.footer-main{grid-template-columns:1fr 1fr;gap:42px}.footer-brand-col{max-width:none}.footer-review-column{max-width:360px}}
+@media(max-width:700px){html{scroll-padding-top:76px}body{padding-top:60px}.header .nav{height:60px}.mobile-nav{top:60px}.footer-main{grid-template-columns:1fr;gap:36px}.footer-review-column{max-width:none}.location-heading{align-items:flex-start;flex-direction:column}.location-heading>a{width:100%;text-align:center}.map-frame{height:300px}.premium-footer{padding-top:50px}.premium-footer .foot-bottom{display:block}.premium-footer .foot-bottom span{display:block;margin-top:7px}}
+
+
+/* Goldara visual refinement - staging */
+html{scroll-padding-top:54px}
+body{padding-top:54px}
+.header{position:fixed !important;top:0;left:0;right:0;background:#f5f5f7 !important;color:#1d1d1f !important;border-bottom:1px solid rgba(0,0,0,.10);backdrop-filter:none !important;-webkit-backdrop-filter:none !important}
+.nav{height:54px !important}
+.brand{min-width:168px !important;height:54px;display:flex;align-items:center}
+.brand-logo{display:block !important;width:auto !important;height:32px !important;max-width:175px;object-fit:contain}
+.links{color:#1d1d1f !important;gap:24px !important}
+.links a:not(.nav-whatsapp){color:#1d1d1f}
+.nav-whatsapp{background:#25d366 !important;color:#fff !important;min-height:34px !important;padding:0 16px !important}
+.nav-whatsapp:hover{background:#20bd5a !important}
+.mobile-nav{top:54px !important;background:rgba(245,245,247,.98) !important}
+
+.hero-product{min-height:720px}
+.hero-visual{left:50% !important;bottom:-12px !important;transform:translateX(-50%) !important;width:min(1160px,94vw) !important;height:auto !important;display:flex !important;justify-content:center;align-items:flex-end;mask-image:none !important;-webkit-mask-image:none !important}
+.hero-visual img{width:100% !important;height:auto !important;object-fit:contain !important;object-position:center bottom !important;display:block;filter:none !important}
+
+.floating-wa{width:62px !important;height:62px !important;padding:0 !important;background:transparent !important;color:transparent !important;font-size:0 !important;line-height:0;display:grid !important;place-items:center !important;border-radius:50% !important;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,.18) !important;border:0 !important}
+.floating-wa img{display:block;width:100%;height:100%;object-fit:cover}
+
+@media(max-width:900px){
+  html{scroll-padding-top:52px}
+  body{padding-top:52px}
+  .nav{height:52px !important}
+  .brand{height:52px;min-width:150px !important}
+  .brand-logo{height:29px !important;max-width:150px}
+  .mobile-nav{top:52px !important}
+  .hero-product{min-height:680px}
+  .hero-visual{width:105vw !important;bottom:-10px !important}
+}
+@media(max-width:560px){
+  .nav{height:52px !important}
+  .brand{height:52px;min-width:140px !important}
+  .brand-logo{height:27px !important;max-width:140px}
+  .hero-product{min-height:640px}
+  .hero-visual{width:125vw !important;bottom:-8px !important}
+  .floating-wa{width:58px !important;height:58px !important;right:16px !important;bottom:16px !important}
+}
+
+/* Final Apple-style header / hero tuning */
+html{scroll-padding-top:48px}
+body{padding-top:48px}
+.header{position:fixed !important;top:0;left:0;right:0;height:48px !important;background:#1d1d1f !important;color:#f5f5f7 !important;border-bottom:0 !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important}
+.nav{height:48px !important}
+.brand{min-width:150px !important;height:48px !important;align-items:center}
+.brand-logo{display:block !important;width:auto !important;height:26px !important;max-width:150px;object-fit:contain}
+.links{gap:25px !important;font-size:12px !important;color:#f5f5f7 !important}
+.links a:not(.nav-whatsapp){color:#f5f5f7 !important;opacity:.88}
+.links a:not(.nav-whatsapp):hover{color:#fff !important;opacity:1}
+.nav-whatsapp{background:#25d366 !important;color:#fff !important;min-height:30px !important;padding:0 15px !important;border-radius:999px !important}
+.mobile-nav{top:48px !important;background:rgba(29,29,31,.98) !important;color:#f5f5f7 !important}
+.mobile-nav a{color:#f5f5f7 !important}
+.mobile-nav .nav-whatsapp{background:#25d366 !important;color:#fff !important}
+
+.hero-product{min-height:760px !important;padding-bottom:0 !important}
+.hero-visual{bottom:-86px !important;width:min(1120px,90vw) !important;height:auto !important}
+.hero-visual img{width:100% !important;height:auto !important;object-fit:contain !important;object-position:center bottom !important}
+
+.floating-wa{width:64px !important;height:64px !important;padding:0 !important;border-radius:50% !important;background:#25d366 !important;color:#fff !important;border:0 !important;box-shadow:0 10px 28px rgba(0,0,0,.28) !important;display:grid !important;place-items:center !important}
+.floating-wa .wa-icon{width:36px;height:36px;display:grid;place-items:center}
+.floating-wa svg{width:36px;height:36px;fill:#fff;display:block}
+.floating-wa:hover{transform:scale(1.06);background:#20bd5a !important}
+
+@media(max-width:900px){
+ html{scroll-padding-top:52px}
+ body{padding-top:52px}
+ .nav{height:52px !important}
+ .brand{height:52px !important;min-width:145px !important}
+ .brand-logo{height:28px !important;max-width:145px}
+ .mobile-nav{top:52px !important}
+ .hero-product{min-height:700px !important}
+ .hero-visual{bottom:-60px !important;width:102vw !important}
+}
+@media(max-width:560px){
+ .nav{height:52px !important}
+ .brand{height:52px !important;min-width:135px !important}
+ .brand-logo{height:26px !important;max-width:135px}
+ .hero-product{min-height:660px !important}
+ .hero-visual{bottom:-46px !important;width:118vw !important}
+ .floating-wa{width:58px !important;height:58px !important;right:16px !important;bottom:16px !important}
+ .floating-wa .wa-icon,.floating-wa svg{width:32px;height:32px}
+}
+
+/* Final layout fix - hero copy above product image */
+/* Header logo: inline SVG */
+.brand-mark{display:block;width:142px;height:30px;flex:0 0 auto}
+.brand{display:flex !important;align-items:center !important;height:48px !important;min-width:170px !important}
+@media(max-width:900px){.brand{height:52px !important;min-width:160px !important}.brand-mark{width:145px;height:31px}}
+@media(max-width:560px){.brand{min-width:150px !important}.brand-mark{width:140px;height:30px}}
+
+/* Apple-style hero composition: copy first, image clearly below */
+.hero-product{
+  min-height:760px !important;
+  height:auto !important;
+  padding:86px 0 0 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  overflow:hidden !important;
+}
+.hero-product .product-copy{
+  position:relative !important;
+  z-index:5 !important;
+  width:min(920px,92vw) !important;
+  text-align:center !important;
+  margin:0 auto !important;
+}
+.hero-product .product-copy .eyebrow{margin-bottom:22px !important}
+.hero-product .product-copy h1{margin:0 !important}
+.hero-product .product-copy .product-subtitle{margin-top:12px !important}
+.hero-product .product-copy .product-text{margin-top:18px !important}
+.hero-product .product-actions{margin-top:24px !important;position:relative !important;z-index:6 !important}
+
+.hero-visual{
+  position:relative !important;
+  left:auto !important;
+  right:auto !important;
+  top:auto !important;
+  bottom:auto !important;
+  transform:none !important;
+  z-index:1 !important;
+  width:min(1060px,92vw) !important;
+  height:auto !important;
+  margin:30px auto 0 !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:flex-end !important;
+  mask-image:none !important;
+  -webkit-mask-image:none !important;
+}
+.hero-visual img{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  height:auto !important;
+  object-fit:contain !important;
+  object-position:center bottom !important;
+  filter:none !important;
+}
+.floating-wa{
+  position:fixed !important;
+  right:22px !important;
+  bottom:22px !important;
+  z-index:100 !important;
+}
+.floating-wa .wa-icon svg{width:36px !important;height:36px !important;fill:#fff !important}
+
+@media(max-width:900px){
+  .hero-product{min-height:700px !important;padding-top:72px !important}
+  .hero-visual{width:102vw !important;margin-top:26px !important}
+}
+@media(max-width:560px){
+  .hero-product{min-height:650px !important;padding-top:66px !important}
+  .hero-product .product-copy{width:92vw !important}
+  .hero-visual{width:118vw !important;margin-top:24px !important}
+}
+
+/* Final Apple-style hero alignment */
+.brand{min-width:160px !important;height:48px !important;display:flex !important;align-items:center !important}
+.brand-logo{display:block !important;width:128px !important;height:auto !important;max-width:none !important;object-fit:contain !important}
+.hero-product{min-height:690px !important;height:auto !important;padding:0 !important}
+.hero-product .product-copy{padding:76px 24px 0 !important}
+.hero-product .product-copy h1{font-size:clamp(46px,6vw,72px) !important;line-height:.98 !important}
+.hero-product .product-subtitle{font-size:clamp(21px,2.6vw,30px) !important}
+.hero-product .product-text{margin-top:14px !important;font-size:15px !important}
+.hero-product .product-actions{margin-top:22px !important}
+.hero-visual{position:relative !important;inset:auto !important;transform:translateY(-92px) !important;width:min(1450px,120vw) !important;height:auto !important;margin:-32px auto 0 !important;display:flex !important;justify-content:center !important;align-items:flex-end !important;mask-image:none !important;-webkit-mask-image:none !important;overflow:visible !important}
+.hero-visual img{width:100% !important;height:auto !important;object-fit:contain !important;object-position:center bottom !important}
+.floating-wa .wa-icon svg{width:36px !important;height:36px !important;fill:#fff !important}
+@media(max-width:900px){
+ .brand{min-width:150px !important;height:52px !important}
+ .brand-logo{width:126px !important}
+ .hero-product{min-height:640px !important}
+ .hero-product .product-copy{padding-top:62px !important}
+ .hero-visual{width:118vw !important;transform:translateY(-70px) !important;margin-top:-18px !important}
+}
+@media(max-width:560px){
+ .brand{min-width:145px !important;height:52px !important}
+ .brand-logo{width:122px !important}
+ .hero-product{min-height:600px !important}
+ .hero-product .product-copy{padding-top:56px !important}
+ .hero-product .product-copy h1{font-size:48px !important}
+ .hero-visual{width:145vw !important;transform:translateY(-52px) !important;margin-top:-12px !important}
+}
+
+/* Footer contrast refinement */
+/* Strong contrast, still aligned with Goldara + Apple-inspired palette */
+.premium-footer{
+  background:#0b0b0d !important;
+  color:#f5f5f7 !important;
+  border-top:1px solid #2a2a2d !important;
+}
+.premium-footer *{box-sizing:border-box}
+.premium-footer .footer-logo,
+.premium-footer .footer-logo span,
+.premium-footer .footer-logo small{color:#f5f5f7 !important}
+.premium-footer .footer-logo-mark{
+  border-color:#d6ad35 !important;
+  color:#d6ad35 !important;
+  background:rgba(214,173,53,.06) !important;
+}
+.premium-footer .footer-brand-col>p,
+.premium-footer .footer-column p,
+.premium-footer .location-heading p{
+  color:#c7c7cc !important;
+}
+.premium-footer .footer-column h4,
+.premium-footer .footer-review-column>h4,
+.premium-footer .location-heading h4{
+  color:#e0b83f !important;
+}
+.premium-footer .footer-column p strong{
+  color:#e0b83f !important;
+}
+.premium-footer .footer-column a,
+.premium-footer .footer-navigation>a{
+  color:#f2f2f4 !important;
+}
+.premium-footer .footer-column a:hover,
+.premium-footer .footer-navigation>a:hover{
+  color:#e0b83f !important;
+}
+.premium-footer .social-row a{
+  color:#f5f5f7 !important;
+  border-color:#3a3a3e !important;
+  background:#121214 !important;
+}
+.premium-footer .social-row a:hover{
+  border-color:#e0b83f !important;
+  color:#e0b83f !important;
+  background:#171719 !important;
+}
+.premium-footer .footer-location,
+.premium-footer .foot-bottom{
+  border-color:#2a2a2d !important;
+}
+.premium-footer .location-heading>a{
+  color:#e0b83f !important;
+  border-color:rgba(224,184,63,.65) !important;
+  background:transparent !important;
+}
+.premium-footer .location-heading>a:hover{
+  background:#d6ad35 !important;
+  color:#111 !important;
+}
+.premium-footer .review-card{
+  background:#111113 !important;
+  border:1px solid #3b3b3f !important;
+  box-shadow:none !important;
+}
+.premium-footer .review-card,
+.premium-footer .review-card p,
+.premium-footer .review-card strong{
+  color:#f5f5f7 !important;
+}
+.premium-footer .review-card small{
+  color:#e0b83f !important;
+}
+.premium-footer .review-button{
+  background:#d6ad35 !important;
+  color:#111 !important;
+  border-color:#d6ad35 !important;
+}
+.premium-footer .foot-bottom{
+  color:#9b9ba2 !important;
+}
+.premium-footer .foot-bottom a{
+  color:#c7c7cc !important;
+}
+
+
+/* Exact Goldara logo + compact Apple-style hero + iPhone Duo */
+.brand-logo{width:132px !important;height:auto !important;max-width:132px !important;object-fit:contain !important}
+.footer-logo{display:inline-flex !important;align-items:center !important}
+.footer-logo img{display:block;width:210px;height:auto;max-width:100%;object-fit:contain}
+.hero-product{min-height:590px !important}
+.hero-product .product-copy{padding-top:58px !important}
+.hero-product .product-copy .product-text{max-width:620px !important;margin-left:auto !important;margin-right:auto !important}
+.hero-visual{width:min(980px,78vw) !important;transform:none !important;margin:20px auto 0 !important}
+.duo-product{min-height:610px;background:#f5f5f7;color:#1d1d1f;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;overflow:hidden;padding:62px 20px 0}
+.duo-copy{position:relative;z-index:2;width:min(860px,92vw)}
+.duo-eyebrow{color:#6e6e73 !important;margin-bottom:14px !important}
+.duo-product h2{font-size:clamp(42px,5vw,64px);line-height:1;margin:0;letter-spacing:-.04em}
+.duo-subtitle{font-size:clamp(20px,2.3vw,28px);margin:12px 0 5px;color:#1d1d1f}
+.duo-meta{font-size:15px;margin:0;color:#6e6e73}
+.duo-product .product-actions{margin-top:20px !important}
+.duo-product .pill.secondary{color:#0071e3 !important;border-color:#0071e3 !important}
+.duo-visual{width:min(1180px,94vw);margin:28px auto 0;display:flex;justify-content:center;align-items:flex-end}
+.duo-visual img{display:block;width:100%;height:auto;object-fit:contain}
+@media(max-width:900px){.hero-product{min-height:560px !important}.hero-product .product-copy{padding-top:54px !important}.hero-visual{width:86vw !important}.duo-product{min-height:560px;padding-top:54px}.duo-visual{width:118vw;margin-top:24px}}
+@media(max-width:560px){.brand-logo{width:124px !important}.hero-product{min-height:510px !important}.hero-product .product-copy{padding-top:48px !important}.hero-product .product-copy .product-text{font-size:14px !important}.hero-visual{width:102vw !important;margin-top:14px !important}.duo-product{min-height:520px;padding-top:48px}.duo-product h2{font-size:42px}.duo-visual{width:145vw;margin-top:20px}}
